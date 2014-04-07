@@ -1,0 +1,32 @@
+// sprite
+
+$realm-layout: horizontal; 
+@import "realm/*.png";   
+
+$height: realm-sprite-height(s_cycu);  
+$width: realm-sprite-width(s_cycu);  
+
+
+
+
+.zone_select {
+ul {
+
+			@include  all-realm-sprites; 
+   
+
+    }
+}    
+
+.zone_select {
+ul {
+	li {  
+   		display: inline-block;  
+    	height: $height;  
+    	width: $width;  
+    	@include realm-sprite(s_cycu);  
+    }  
+
+	}
+}
+

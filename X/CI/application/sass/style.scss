@@ -1,0 +1,317 @@
+@import "variables";
+
+ 
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { display: table; content: " "; }
+.clearfix:after { clear: both; }
+
+// 主要CSS 
+
+html {  
+  body {
+      
+      height: 100%;
+      color: white;
+      font-size: 62.5%; 
+      font-family: 'Open Sans', 'Apple Lihei Pro', '微軟正黑體';
+
+      a{
+        color: #fff;
+        &:hover {
+          color: $title_color;
+          } 
+
+      }
+  }
+} 
+
+div.container { height: 100%;
+                color: inherit;
+}
+
+div.wrap {
+  @include mainelement; 
+  box-sizing: padding-box;
+  padding: 20px;
+  min-height: 75%;
+  background-color: rgba(0, 0, 0, 0.7);
+/*  height: 75%; */
+
+  #localtime { display: none;}
+ 
+}
+
+div.postscript { @include mainelement; 
+text-align: right;
+}
+
+
+header 
+{
+  ul { 
+    li { @include horizon-list; }
+  }
+ }
+
+
+
+// 地區 Sprite
+
+@import "realm_sprite"; 
+
+
+
+// 表單設計
+
+
+/* top_bar */
+
+.user_status {
+
+  
+  box-sizing: border-box;
+  margin-bottom: 1.6rem;
+  width: 100%;
+  height: $bar_height; 
+  
+}
+
+#login_field{
+       float: right;
+      li {
+        a {
+        @include standard-font; 
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 0 $bar_height/5;
+        padding: 0 $bar_height/5;
+        height: $bar_height;
+        border: #ff6900 0.3rem solid;
+        line-height: $bar_height;
+
+      &:before {
+          color: white;
+          content: "\f023\00a0";
+          font-family: FontAwesome;
+        }
+
+        &:hover {
+          color: #ff6900;
+
+        }
+
+        }
+
+
+    }
+}
+
+
+#info_box, #add_box {
+  
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+
+}
+
+
+#what_eaten{
+  float: left;
+  margin-left: 20px;
+  
+}
+
+.user_id, .user_pw{
+  @include standard-font;
+  display: inline-block;
+  float: left;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  width: 100px;
+  height: $bar_height;
+  border: 0;
+  background: #555;
+  color: #fff;
+
+  &:active { color: #ddd;}
+  
+}
+
+
+#userbar 
+{
+  float: right;
+}
+
+
+/* button{
+   padding: 3px 3px 3px 3px;
+   box-shadow: 2px 3px 2px #000;
+   width: 80px;
+   font-family: Georgia;
+  
+} */
+/* .login_button{
+  
+  
+} */
+
+
+.login_button {
+   display: block;
+   width: 80px;
+   height: 4.5rem;
+   border: 0;
+   background: #ed972c;
+   color: #fff;
+
+  &:hover, &:active{
+   background: #ff8d00;
+   color: #fff;   
+  }
+  
+   }
+
+
+.buttonX {
+   display:inline-block;
+
+   float: right;
+   box-sizing: border-box;
+   width: 80px;
+   background:#158edb;
+   color:#ffffff;
+   vertical-align: middle;  
+   text-align: center;
+   line-height: $bar_height;
+  
+   }
+.buttonX:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.buttonX:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+
+
+.buttonX.logout{
+  
+  background: #333;
+}
+
+
+
+ 
+/* Form text input */
+ 
+.form-wrapper {
+  float: left;
+
+  ul{
+    float: right;    
+  }
+  input {
+    @include standard-font;
+    float: right;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    width: 24rem;
+    height: $bar_height;
+    border: 0;
+    background: #555;
+    color: #fff;
+    &:focus {
+      color: white;
+    }
+  }
+  button {
+    position: relative;
+    float: right;
+    overflow: visible;
+    padding: 0;
+    width: 110px;
+    height: $bar_height;
+    border: 0;
+    background: #297dcc;
+    color: #fff;
+    &:hover {
+      background: #0c5da5;
+    }
+    &:active, &:focus {
+      outline: 0;
+      background: #c42f2f;
+    }
+    &:before {
+      position: absolute;
+      top: 12px;
+      left: -6px;
+      border-width: 0 7px 0 7px;
+      border-style: solid solid solid none;
+      border-color: transparent #d83c3c transparent;
+      /* left arrow */
+      content: '';
+    }
+    &:hover:before {
+      border-right-color: #e54040;
+    }
+    &:focus:before, &:active:before {
+      border-right-color: #c42f2f;
+    }
+    &::-moz-focus-inner {
+      padding: 0;
+      /* remove extra button spacing for Mozilla Firefox */
+      border: 0;
+    }
+  }
+}
+
+
+// 地圖
+
+#map { 
+
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 200px;
+}
+
+
+
+
+
+// 搜尋結果
+
+.popular_all
+{
+width: 100%;
+
+
+    tr {
+    height: 24px;
+        th { width: 20%;  border-bottom: 1px solid #888; } 
+    td {
+        width: 20%;
+        text-align: center;
+        }
+    }
+}
+
+
+
+// 頁尾 
+
+footer {
+  color: #aaa;
+
+}
+

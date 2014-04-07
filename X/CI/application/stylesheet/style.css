@@ -1,0 +1,343 @@
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* line 5, ../sass/style.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+
+/* line 6, ../sass/style.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 11, ../sass/style.scss */
+html body {
+  height: 100%;
+  color: white;
+  font-size: 62.5%;
+  font-family: 'Open Sans', 'Apple Lihei Pro', '微軟正黑體';
+}
+/* line 18, ../sass/style.scss */
+html body a {
+  color: #fff;
+}
+/* line 20, ../sass/style.scss */
+html body a:hover {
+  color: #34dcce;
+}
+
+/* line 28, ../sass/style.scss */
+div.container {
+  height: 100%;
+  color: inherit;
+}
+
+/* line 32, ../sass/style.scss */
+div.wrap {
+  margin: 0 auto;
+  min-width: 760px;
+  max-width: 1024px;
+  width: 75%;
+  box-sizing: padding-box;
+  padding: 20px;
+  min-height: 75%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /*  height: 75%; */
+}
+/* line 40, ../sass/style.scss */
+div.wrap #localtime {
+  display: none;
+}
+
+/* line 44, ../sass/style.scss */
+div.postscript {
+  margin: 0 auto;
+  min-width: 760px;
+  max-width: 1024px;
+  width: 75%;
+  text-align: right;
+}
+
+/* line 52, ../sass/style.scss */
+header ul li {
+  display: inline-block;
+  float: left;
+}
+
+/* line 87, realm/*.png */
+.realm-sprite, .zone_select ul .realm-realm-s0d700e791d, .zone_select ul .realm-s_cycu, .zone_select ul .realm-s_hai-hwa-sogo, .zone_select ul .realm-s_ncu-night-street, .zone_select ul .realm-s_needle, .zone_select ul .realm-s_train-station-tt, .zone_select ul li {
+  background-image: url('../assets/realm-s762e9261ff.png');
+  background-repeat: no-repeat;
+}
+
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-realm-s0d700e791d {
+  background-position: 0 0;
+}
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-s_cycu {
+  background-position: -680px 0;
+}
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-s_hai-hwa-sogo {
+  background-position: -816px 0;
+}
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-s_ncu-night-street {
+  background-position: -952px 0;
+}
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-s_needle {
+  background-position: -1088px 0;
+}
+/* line 77, ../../../../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.13/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.zone_select ul .realm-s_train-station-tt {
+  background-position: -1224px 0;
+}
+
+/* line 23, ../sass/_realm_sprite.scss */
+.zone_select ul li {
+  display: inline-block;
+  height: 136px;
+  width: 136px;
+  background-position: -680px 0;
+}
+
+/* top_bar */
+/* line 69, ../sass/style.scss */
+.user_status {
+  box-sizing: border-box;
+  margin-bottom: 1.6rem;
+  width: 100%;
+  height: 4.5rem;
+}
+
+/* line 79, ../sass/style.scss */
+#login_field {
+  float: right;
+}
+/* line 82, ../sass/style.scss */
+#login_field li a {
+  font-size: 1.4rem;
+  font-size: 14px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 0.9rem;
+  padding: 0 0.9rem;
+  height: 4.5rem;
+  border: #ff6900 0.3rem solid;
+  line-height: 4.5rem;
+}
+/* line 92, ../sass/style.scss */
+#login_field li a:before {
+  color: white;
+  content: "\f023\00a0";
+  font-family: FontAwesome;
+}
+/* line 98, ../sass/style.scss */
+#login_field li a:hover {
+  color: #ff6900;
+}
+
+/* line 110, ../sass/style.scss */
+#info_box, #add_box {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* line 123, ../sass/style.scss */
+#what_eaten {
+  float: left;
+  margin-left: 20px;
+}
+
+/* line 129, ../sass/style.scss */
+.user_id, .user_pw {
+  font-size: 1.4rem;
+  font-size: 14px;
+  display: inline-block;
+  float: left;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  width: 100px;
+  height: 4.5rem;
+  border: 0;
+  background: #555;
+  color: #fff;
+}
+/* line 141, ../sass/style.scss */
+.user_id:active, .user_pw:active {
+  color: #ddd;
+}
+
+/* line 147, ../sass/style.scss */
+#userbar {
+  float: right;
+}
+
+/* button{
+   padding: 3px 3px 3px 3px;
+   box-shadow: 2px 3px 2px #000;
+   width: 80px;
+   font-family: Georgia;
+  
+} */
+/* .login_button{
+  
+  
+} */
+/* line 165, ../sass/style.scss */
+.login_button {
+  display: block;
+  width: 80px;
+  height: 4.5rem;
+  border: 0;
+  background: #ed972c;
+  color: #fff;
+}
+/* line 173, ../sass/style.scss */
+.login_button:hover, .login_button:active {
+  background: #ff8d00;
+  color: #fff;
+}
+
+/* line 181, ../sass/style.scss */
+.buttonX {
+  display: inline-block;
+  float: right;
+  box-sizing: border-box;
+  width: 80px;
+  background: #158edb;
+  color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 4.5rem;
+}
+
+/* line 194, ../sass/style.scss */
+.buttonX:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+
+/* line 199, ../sass/style.scss */
+.buttonX:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+
+/* line 206, ../sass/style.scss */
+.buttonX.logout {
+  background: #333;
+}
+
+/* Form text input */
+/* line 216, ../sass/style.scss */
+.form-wrapper {
+  float: left;
+}
+/* line 219, ../sass/style.scss */
+.form-wrapper ul {
+  float: right;
+}
+/* line 222, ../sass/style.scss */
+.form-wrapper input {
+  font-size: 1.4rem;
+  font-size: 14px;
+  float: right;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  width: 24rem;
+  height: 4.5rem;
+  border: 0;
+  background: #555;
+  color: #fff;
+}
+/* line 232, ../sass/style.scss */
+.form-wrapper input:focus {
+  color: white;
+}
+/* line 236, ../sass/style.scss */
+.form-wrapper button {
+  position: relative;
+  float: right;
+  overflow: visible;
+  padding: 0;
+  width: 110px;
+  height: 4.5rem;
+  border: 0;
+  background: #297dcc;
+  color: #fff;
+}
+/* line 246, ../sass/style.scss */
+.form-wrapper button:hover {
+  background: #0c5da5;
+}
+/* line 249, ../sass/style.scss */
+.form-wrapper button:active, .form-wrapper button:focus {
+  outline: 0;
+  background: #c42f2f;
+}
+/* line 253, ../sass/style.scss */
+.form-wrapper button:before {
+  position: absolute;
+  top: 12px;
+  left: -6px;
+  border-width: 0 7px 0 7px;
+  border-style: solid solid solid none;
+  border-color: transparent #d83c3c transparent;
+  /* left arrow */
+  content: '';
+}
+/* line 263, ../sass/style.scss */
+.form-wrapper button:hover:before {
+  border-right-color: #e54040;
+}
+/* line 266, ../sass/style.scss */
+.form-wrapper button:focus:before, .form-wrapper button:active:before {
+  border-right-color: #c42f2f;
+}
+/* line 269, ../sass/style.scss */
+.form-wrapper button::-moz-focus-inner {
+  padding: 0;
+  /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+}
+
+/* line 280, ../sass/style.scss */
+#map {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 200px;
+}
+
+/* line 295, ../sass/style.scss */
+.popular_all {
+  width: 100%;
+}
+/* line 299, ../sass/style.scss */
+.popular_all tr {
+  height: 24px;
+}
+/* line 301, ../sass/style.scss */
+.popular_all tr th {
+  width: 20%;
+  border-bottom: 1px solid #888;
+}
+/* line 302, ../sass/style.scss */
+.popular_all tr td {
+  width: 20%;
+  text-align: center;
+}
+
+/* line 313, ../sass/style.scss */
+footer {
+  color: #aaa;
+}
