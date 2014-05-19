@@ -29,7 +29,7 @@ if($SQL_Debug){
 
   if(!$zone_result){ 
   
-  echo '目前 '.$place.' 還沒有資料喔! <br/>';
+  echo '目前 '.$place.' 還沒有資料喔！ <br/>';
 
   }else{
 
