@@ -4,104 +4,44 @@ $SQL_SEE_QUERY = FALSE;
 
 ?>
 
-mainV.php | I am mainV page | /view/mainV.php  <br/>
-
-[ <?php echo $place?>   ] <br/>
-
-
-
-<img src=" <?php echo $PNGurl  ?>">		<br/>
-
-<div="circle_icon">
-
-<img src="  <?php echo $all_circles?> " <?php echo $img_pos?>       >  <br/>
-
-</div>
-
-<?php echo $img_pos ?> <br/>
-
-=======HERE SHOWS Query Result =====	<br/>	
-<?php 
-    //debug message, to see, change $SQL_SEE_QUERY to TRUE
-    if($SQL_SEE_QUERY){
-    echo '<br/>'.$str.'<br/>'; 
-    }
-
-    foreach($zone_cal_sum as $zone_val){
-
-    echo '<br/>本區消費總額: '.$zone_val['本區消費總額'].'<br/>';
-
-    echo '這個月最多人吃過的早餐<br/>';
-
-  }
+<section class="zone_dial">
+<ul>
+  <li><a href="#" class="hai-hwa">海華商圈</a><span>NTD 337,8990</span></li>
+  <li><a href="#" class="ncu">中央大學</a><span>NTD 337,8990</span></li>
+  <li><a href="#" class="ncyu">中原大學</a><span>NTD 337,8990</span></li>
+  <li><a href="#" class="random">大海撈針</a></li>
+</ul>
+</section>
 
 
+<section class="main_list">
+<h2 class="list_title">本月最受歡迎的早餐</h2><h3 class="list_title">The Most Popular Items This Month</h3>
+<table>
+  <thead>
+    <tr>
+      <td><i class="fa fa-trophy fa-lg"></i></td>
+      <td>品名</td>
+      <td>店家</td>
+      <td>地區</td>
+      <td>價格</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>培根義大利麵</td>
+      <td>早！美味</td>
+      <td>海華商圈</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>豬肉吐司</td>
+      <td>慈惠三街早餐車</td>
+      <td>海華商圈</td>
+      <td>35</td>
+    </tr>
+  </tbody>
+</table>
 
-
-?> 
-
-
-<?php 
-
-  if(!$zone_result){
-  
-  echo '目前 '.$place.' 還沒有資料喔! <br/>';
-
-  }else{
-
-    foreach($zone_result as $zone_details){
-
-     //這邊把資料存成 format
-     $zone_item_name =  $zone_details['名稱'];
-
-     $zone_name = $zone_details['商圈'];
-
-     $zone_brand_name = $zone_details['品牌'];
-     $zone_store_name = $zone_details['店名'];
-     $zone_item_price = $zone_details['單價'];
-     $zone_total_price = $zone_details['消費總額'];
-
-
-
-
-     //這邊把變數用echo 印出來, MDFH 你要改
-     //MDFH 在這邊改layout
-     echo $zone_item_name.","
-       .$zone_name."," 
-       .$zone_brand_name.","
-       .$zone_store_name.","
-       .$zone_item_price.","
-       .$zone_total_price.'<br/>';
-
-
-    }//endforeach 
-    
-
-
-
-
-
-  }//end else case
-
-
-?>
-
-<!--old method, do not use
-                                  <?php foreach ($zone_result as $zone_details): ?>
-
-                                     	 <?php echo $zone_details['名稱'].","
-                                     	           .$zone_details['品牌'].","
-                                     	           .$zone_details['店名'].","
-                                     	           .$zone_details['單價'].","
-                                     	           .$zone_details['消費總額'];
-                                     	 ?>
-                                     <br />
-                                  <?php endforeach?>
--->
-
-
-=======HERE SHOWS Query Result =====	<br/>
-
-[Here shows Background Image] <br/>
-
-<img src=" <?php echo $BG_image  ?>">	
+</section>

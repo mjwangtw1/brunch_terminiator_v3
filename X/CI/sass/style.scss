@@ -1,0 +1,245 @@
+@import 'reset';
+@import 'jeet/index';
+@import 'variables';
+@import 'framework_sprite';
+
+@import url(http://fonts.googleapis.com/css?family=Cousine|Open+Sans:400,300,600|Open+Sans+Condensed:300,700);
+
+/* jeet: 編輯模式 */
+//@include edit();
+  
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { display: table; content: " "; }
+.clearfix:after { clear: both; }
+
+
+html {
+font-size: 67.5%;
+font-family: 'Open Sans', Arial, 'Apple Lihei Pro', '微軟正黑體';
+}
+
+body {
+@include font-rem(14);
+  color: white;
+
+}
+
+
+
+/* The Very Layout */
+.container
+  {
+  @include center(80%);
+  min-width: 960px;
+  box-sizing: border-box;
+  padding: 1em;
+
+  }
+
+header {
+  @include col(1);
+  }
+
+
+ // p:last-child {
+ // @include col(0.2425, 0, 0, 0, 0);
+ //   }
+ 
+.main_list {
+  @include col(0.7, 0.3, 0, 0, 0);
+  box-sizing: border-box;
+  border: 2px solid #506266;  
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 1);
+
+
+}
+
+footer {
+  @include col(1);
+  padding: 1em 0;
+}
+
+/* END The Very Layout */
+
+
+/* Componenets */
+.home_logo {
+  @include span(0.3);
+  a {
+    @include use-framework-sprite("home_logo");
+    text-indent: -9999px;
+    margin-bottom: 1em;
+  }
+}
+
+
+aside {
+  input {
+    @include font-rem(16);
+    
+    display: block;
+    border: 0;
+    width: 250/290 * 100%;
+    max-width: 250px;
+    height: 3em;
+    line-height: 1.8rem;
+    padding-bottom: 0;
+  }
+  input:first-child {
+    text-align: center ;
+    background-color: #fff;
+  } 
+  input:last-child {
+    background-color: black;
+    color: #fff;
+  }
+
+  @include span(0.3);
+
+}
+
+.user_status {
+  @include span(0.3);
+  float: right;
+
+ ul li {
+  @include use-framework-sprite("user_status1");  
+  float: left;
+  box-sizing: border-box;
+  background-position: right center;
+
+  &:hover {
+  @include use-framework-sprite("user_status2");
+
+  }
+
+  }
+}
+
+
+.zone_dial {
+  @include span(0.7);
+  ul li {
+    float: left;
+    text-indent: -9999px;
+    width: 25%;
+    max-width: 25%;
+    position: relative;
+
+
+    span {
+
+    @include font-rem(16);
+
+     font-weight: 600;
+     font-family: 'Cousine', '微軟正黑體';
+
+      position: absolute;
+      width: 100%;
+      bottom: 10%;
+      left: 10%;
+      padding: 0 auto;
+      text-indent: 0;
+
+
+    }
+
+  }
+
+}
+
+.hai-hwa, .ncu, .ncyu, .random {
+  width: 100%;
+  min-width: 180px;
+
+
+}
+
+.hai-hwa {
+    @include use-framework-sprite("hai-hwa");
+   }
+
+.ncu {
+    @include use-framework-sprite("ncu");
+   }
+
+.ncyu {
+   @include use-framework-sprite("ncyu");
+
+   }
+
+.random {
+   @include use-framework-sprite("random");
+   }
+
+.main_list table {  /* 主頁mainV.php的總排名表格 */
+  thead, tbody{
+    td:nth-child(1){
+      @include span(0.05);
+    }
+    td:nth-child(2){
+      @include span(0.35);
+    }
+    td:nth-child(3){
+      @include span(3/10);
+    }    
+    td:nth-child(4){
+      @include span(2/10);
+    }
+    td:nth-child(5){
+      @include span(1/10);
+    }
+  }
+  thead {
+  tr{
+    @include font-rem(16);
+    @include table_cell(0.5rem, 0);
+    line-height: 1.5em;
+    } 
+
+  }
+  tbody {
+  tr{
+    @include font-rem(14);
+    @include table_cell(0.5rem, 0);
+    line-height: 1.5em;
+    }
+
+  }
+  @include col(1);
+  font-family: 'Cousine';
+  text-align: center;
+}
+
+
+.cc-by-sa {
+  @include use-framework-sprite("cc-by-sa");
+  display: inline-block;
+  text-indent: -9999px;
+
+}
+
+/* END Componenets */
+ 
+
+/* Regular Styles */
+.list_title {
+  font-weight: 600;
+  font-family: 'Open Sans Condensed', '微軟正黑體';
+  box-sizing: border-box;
+  padding: 0.5em 0 0.5em 1%;
+
+  color: #000;
+  background-color: #fff;
+}
+
+h2.list_title {
+  @include font-rem(16);
+}
+
+h3.list_title {
+  @include font-rem(12);
+  margin: -1em 0 0.5em;
+}
+  

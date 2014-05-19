@@ -8,7 +8,8 @@ class Zone extends CI_Controller{
 		public function __construct(){
 
 			parent::__construct();
-			$this->load->model('zone_model');
+			$this->load->model('zone_model');		
+			$this->load->helper('url');
 
 		}
 

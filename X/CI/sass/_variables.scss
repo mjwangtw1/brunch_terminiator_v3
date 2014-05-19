@@ -1,0 +1,11 @@
+
+@mixin font-rem($the_size) {
+font-size: #{$the_size/10}rem;
+font-size: #{$the_size};
+
+}
+
+@mixin table_cell($the_margin, $the_padding) {
+  margin: $the_margin;
+  padding: $the_padding;
+}

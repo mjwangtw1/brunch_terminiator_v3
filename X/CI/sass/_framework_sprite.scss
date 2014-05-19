@@ -1,0 +1,35 @@
+/*
+ * Retina Sprites for Compass
+ * by:              Gaya Kessler
+ * last update:     03/11/14
+ *
+ * Usage:
+ * 1. create two folders in your image directory (in this case 'framework' and 'framework-2x').
+ * 2. adjust the foldernames defined below if you use different names.
+ * 3. create sprite images for pixel ratio 1 screens and put them in the first folder.
+ * 4. create sprite images for pixel ratio 2 screens and put them in the second folder, use the same filenames.
+ * 5. use the sprite-image in your Sass/Scss using: '@include use-sprite(<sprite-name>)'
+ */
+
+//first we'll define the folders where the sprites are and their layouts
+$framework: sprite-map("framework/*.png", $layout: vertical);
+$framework-2x: sprite-map("framework-2x/*.png", $layout: vertical);
+
+//Sprite mixin, works perfectly with standard defines
+@mixin use-framework-sprite($sprite) {
+    background-image: sprite-url($framework);
+    background-position: sprite-position($framework, $sprite);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: image-height(sprite-file($framework, $sprite));
+    width: image-width(sprite-file($framework, $sprite));
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+        background-image: sprite-url($framework-2x);
+        background-size: (image-width(sprite-path($framework-2x)) / 2) (image-height(sprite-path($framework-2x)) / 2);
+        background-position: round(nth(sprite-position($framework-2x, $sprite), 1) / 2) round(nth(sprite-position($framework-2x, $sprite), 2) / 2);
+        height: image-height(sprite-file($framework-2x, $sprite)) / 2;
+        width: image-width(sprite-file($framework-2x, $sprite)) / 2;
+    }
+}
