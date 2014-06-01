@@ -2,3 +2,5 @@
 /X/CI/config.rb
 
 *.scssc
+
+*.sassc
